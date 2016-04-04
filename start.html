@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+ <script>
+function initial()  //initialization of variables
+{
+ //for nota
+ if( localStorage.ip4 == undefined)
+ { 
+   localStorage.ip4 = 0;
+ }
+ 
+ //for all parties
+ if( localStorage.party1 == undefined)
+ { 
+   localStorage.party1 = 0;
+ }
+ if(localStorage.party2 == undefined)
+ {
+   localStorage.party2 = 0;
+ }
+ if(localStorage.party3==undefined)
+ {
+ localStorage.party3=0;
+ }
+ if(localStorage.party4==undefined)
+ {
+ localStorage.party4=0;
+ }
+ if(localStorage.party5==undefined)
+ {
+ localStorage.party5=0;
+ }
+ 
+//party one candidates
+ if(localStorage.c1p1==undefined)
+ {
+   localStorage.c1p1=0;
+ }
+ if(localStorage.c2p1==undefined)
+ {
+   localStorage.c2p1=0;
+ }
+ if(localStorage.c3p1==undefined)
+ {
+   localStorage.c3p1=0;
+ }
+ if(localStorage.c4p1==undefined)
+ {
+   localStorage.c4p1=0;
+ }
+ if(localStorage.c5p1==undefined)
+ {
+   localStorage.c5p1=0;
+ }
+ if(localStorage.c6p1==undefined)
+ {
+   localStorage.c6p1=0;
+ }
+ if(localStorage.c7p1==undefined)
+ {
+   localStorage.c7p1=0;
+ }
+ if(localStorage.c8p1==undefined)
+ {
+   localStorage.c8p1=0;
+ }
+ if(localStorage.c9p1==undefined)
+ {
+   localStorage.c9p1=0;
+ }
+ if(localStorage.c10p1==undefined)
+ {
+   localStorage.c10p1=0;
+ }
+ if(localStorage.c11p1==undefined)
+ {
+   localStorage.c11p1=0;
+ }
+ if(localStorage.c12p1==undefined)
+ {
+   localStorage.c12p1=0;
+ }
+ if(localStorage.c13p1==undefined)
+ {
+   localStorage.c13p1=0;
+ }
+ 
+ //Party two candidates
+ if(localStorage.c1p2 == undefined)
+ {
+   localStorage.c1p2=0;
+ }
+ if(localStorage.c2p2 == undefined)
+ {
+   localStorage.c2p2=0;
+ }
+ if(localStorage.c3p2 == undefined)
+ {
+   localStorage.c3p2=0;
+ }
+ if(localStorage.c4p2 == undefined)
+ {
+   localStorage.c4p2=0;
+ }
+ if(localStorage.c5p2 == undefined)
+ {
+   localStorage.c5p2=0;
+ }
+ if(localStorage.c6p2 == undefined)
+ {
+   localStorage.c6p2=0;
+ }
+ if(localStorage.c7p2 == undefined)
+ {
+   localStorage.c7p2=0;
+ }
+ if(localStorage.c8p2 == undefined)
+ {
+   localStorage.c8p2=0;
+ }
+ if(localStorage.c9p2 == undefined)
+ {
+   localStorage.c9p2=0;
+ }
+ if(localStorage.c10p2 == undefined)
+ {
+   localStorage.c10p2=0;
+ }
+ if(localStorage.c11p2 == undefined)
+ {
+   localStorage.c11p2=0;
+ }
+ if(localStorage.c12p2 == undefined)
+ {
+   localStorage.c12p2=0;
+ }
+ if(localStorage.c13p2 == undefined)
+ {
+   localStorage.c13p2=0;
+ }
+ if(localStorage.c14p2 == undefined)
+ {
+   localStorage.c14p2=0;
+ }
+ if(localStorage.c15p2 == undefined)
+ {
+   localStorage.c15p2=0;
+ }
+ 
+ 
+ //party3 candidates
+ if(localStorage.c1p3==undefined)
+ {
+   localStorage.c1p3=0;
+ }
+ if(localStorage.c2p3==undefined)
+ {
+   localStorage.c2p3=0;
+ }
+ if(localStorage.c3p3==undefined)
+ {
+   localStorage.c3p3=0;
+ }
+ if(localStorage.c4p3==undefined)
+ {
+   localStorage.c4p3=0;
+ }
+ if(localStorage.c5p3==undefined)
+ {
+   localStorage.c5p3=0;
+ }
+ if(localStorage.c6p3==undefined)
+ {
+   localStorage.c6p3=0;
+ }
+ if(localStorage.c7p3==undefined)
+ {
+   localStorage.c7p3=0;
+ }
+ if(localStorage.c8p3==undefined)
+ {
+   localStorage.c8p3=0;
+ }
+ if(localStorage.c9p3==undefined)
+ {
+   localStorage.c9p3=0;
+ }
+ if(localStorage.c10p3==undefined)
+ {
+   localStorage.c10p3=0;
+ }
+ if(localStorage.c11p3==undefined)
+ {
+   localStorage.c11p3=0;
+ }
+ if(localStorage.c12p3==undefined)
+ {
+   localStorage.c12p3=0;
+ }
+ if(localStorage.c13p3==undefined)
+ {
+   localStorage.c13p3=0;
+ }
+ if(localStorage.c14p3==undefined)
+ {
+   localStorage.c14p3=0;
+ }
+ if(localStorage.c15p3==undefined)
+ {
+   localStorage.c15p3=0;
+ }
+ 
+ 
+ //party4 candidates
+ if(localStorage.c1p4==undefined)
+ {
+   localStorage.c1p4=0;
+ }
+ if(localStorage.c2p4==undefined)
+ {
+   localStorage.c2p4=0;
+ }
+ if(localStorage.c3p4==undefined)
+ {
+   localStorage.c3p4=0;
+ }
+ if(localStorage.c4p4==undefined)
+ {
+   localStorage.c4p4=0;
+ }
+ if(localStorage.c5p4==undefined)
+ {
+   localStorage.c5p4=0;
+ }
+ if(localStorage.c6p4==undefined)
+ {
+   localStorage.c6p4=0;
+ }
+ 
+ //party5 candidates
+ if(localStorage.c1p5==undefined)
+ {
+   localStorage.c1p5=0;
+ }
+ if(localStorage.c2p5==undefined)
+ {
+   localStorage.c2p5=0;
+ }
+ if(localStorage.c3p5==undefined)
+ {
+   localStorage.c3p5=0;
+ }
+ if(localStorage.c4p5==undefined)
+ {
+   localStorage.c4p5=0;
+ }
+ 
+ //to clear for the first time
+ if(localStorage.wipe==undefined)
+ {
+	localStorage.clear();
+	localStorage.wipe=1;
+ }
+ 
+ localStorage.cheat=0; //to avoid going to voting page directly
+ 
+ var voter_list=new Array('1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100','101','102','103','104','105','106','107','108','109','110','111','112','113','114','115','116','117','118','119','120','121','122','123','124','125','126','127','128','129','130','131','132','133','134','135','136','137','138','139','140','141','142','143','144','145','146','147','148','149','150','151','152','153','154','155','156','157','158','159','160','161','162','163','164','165','166','167','168','169','170','171','172','173','174','175','176','177','178','179','180','181','182','183','184','185','186','187','188','189','190','191','192','193','194','195','196','197','198','199','200','201','202','203','204','205','206','207','208','209','210','211','212','213','214','215','216','217','218','219','220','221','222','223','224','225','226','227','228','229','230','231','232','233','234','235','236','237','238','239','240','241','242','243','244','245','246','247','248','249','250','251','252','253','254','255','256','257','258','259','260','261','262','263','264','265','266','267','268','269','270','271','272','273','274','275','276','277','278','279','280','281','282','283','284','285','286','287','288','289','290','291','292','293','294','295','296','297','298','299','300','301','302','303','304','305','306','307','308','309','310','311','312','313','314','315','316','317','318','319','320','321','322','323','324','325','326','327','328','329','330','331','332','333','334','335','336','337','338','339','340','341','342','343','344','345','346','347','348','349','350','351','352','353','354','355','356','357','358','359','360','361','362','363','364','365','366','367','368','369','370','371','372','373','374','375','376','377','378','379','380','381','382','383','384','385','386','387','388','389','390','391','392','393','394','395','396','397','398','399','400');
+ //to define whether the vote was casted previously or not
+ if(localStorage.previous == undefined)
+ {
+    for(var i=0;i<401;i++)                          //will change according to number of voters
+    localStorage.setItem(voter_list[i],1);
+	localStorage.previous=1;
+ }
+}
+
+
+initial();
+  var x=0,a;
+  function start1()         //for animation effect
+  {
+    if(x == 128)
+    {
+      window.clearInterval(a);
+      initial();
+      login();
+    }
+    x++;   
+    document.getElementById("a1").style.fontSize=x+"px"; 
+  }
+  a=setInterval(start1,9);
+var voter_list=new Array('1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100','101','102','103','104','105','106','107','108','109','110','111','112','113','114','115','116','117','118','119','120','121','122','123','124','125','126','127','128','129','130','131','132','133','134','135','136','137','138','139','140','141','142','143','144','145','146','147','148','149','150','151','152','153','154','155','156','157','158','159','160','161','162','163','164','165','166','167','168','169','170','171','172','173','174','175','176','177','178','179','180','181','182','183','184','185','186','187','188','189','190','191','192','193','194','195','196','197','198','199','200','201','202','203','204','205','206','207','208','209','210','211','212','213','214','215','216','217','218','219','220','221','222','223','224','225','226','227','228','229','230','231','232','233','234','235','236','237','238','239','240','241','242','243','244','245','246','247','248','249','250','251','252','253','254','255','256','257','258','259','260','261','262','263','264','265','266','267','268','269','270','271','272','273','274','275','276','277','278','279','280','281','282','283','284','285','286','287','288','289','290','291','292','293','294','295','296','297','298','299','300','301','302','303','304','305','306','307','308','309','310','311','312','313','314','315','316','317','318','319','320','321','322','323','324','325','326','327','328','329','330','331','332','333','334','335','336','337','338','339','340','341','342','343','344','345','346','347','348','349','350','351','352','353','354','355','356','357','358','359','360','361','362','363','364','365','366','367','368','369','370','371','372','373','374','375','376','377','378','379','380','381','382','383','384','385','386','387','388','389','390','391','392','393','394','395','396','397','398','399','400');
+function login()
+{
+ var ids=new Array(),log_flag=0;     //initializing the voters
+ ids[0]=['11a',voter_list[0]];
+ ids[1]=['2a2',voter_list[1]];
+ ids[2]=['33n',voter_list[2]];
+ ids[3]=['4k4',voter_list[3]];
+ ids[4]=['5b5',voter_list[4]];
+ids[5]=['66l',voter_list[5]];
+ids[6]=['7a7',voter_list[6]];
+ids[7]=['8x8',voter_list[7]];
+ids[8]=['99o',voter_list[8]];
+ids[9]=['11z0',voter_list[9]];
+ids[10]=['1m21',voter_list[10]];
+ids[11]=['13t2',voter_list[11]];
+ids[12]=['14s3',voter_list[12]];
+ids[13]=['1j54',voter_list[13]];
+ids[14]=['16n5',voter_list[14]];
+ids[15]=['1a76',voter_list[15]];
+ids[16]=['18a7',voter_list[16]];
+ids[17]=['1u98',voter_list[17]];
+ids[18]=['2p9',voter_list[18]];
+ids[19]=['22a',voter_list[19]];
+ids[20]=['23v1',voter_list[20]];
+ids[21]=['24b2',voter_list[21]];
+ids[22]=['2s53',voter_list[22]];
+ids[23]=['26x4',voter_list[23]];
+ids[24]=['2y75',voter_list[24]];
+ids[25]=['28q6',voter_list[25]];
+ids[26]=['29b7',voter_list[26]];
+ids[27]=['3t8',voter_list[27]];
+ids[28]=['3h19',voter_list[28]];
+ids[29]=['33aa',voter_list[29]];
+ids[30]=['341d',voter_list[30]];
+ids[31]=['352f',voter_list[31]];
+ids[32]=['36w3',voter_list[32]];
+ids[33]=['37g4',voter_list[33]];
+ids[34]=['38f5',voter_list[34]];
+ids[35]=['396s',voter_list[35]];
+ids[36]=['40c7',voter_list[36]];
+ids[37]=['4x18',voter_list[37]];
+ids[38]=['42x9',voter_list[38]];
+ids[39]=['44z0',voter_list[39]];
+ids[40]=['45q1',voter_list[40]];
+ids[41]=['462t',voter_list[41]];
+ids[42]=['4y73',voter_list[42]];
+ids[43]=['48e4',voter_list[43]];
+ids[44]=['49z5',voter_list[44]];
+ids[45]=['50j6',voter_list[45]];
+ids[46]=['51u7',voter_list[46]];
+ids[47]=['52k8',voter_list[47]];
+ids[48]=['5e39',voter_list[48]];
+ids[49]=['55q1',voter_list[49]];
+ids[50]=['56h1',voter_list[50]];
+ids[51]=['57f2',voter_list[51]];
+ids[52]=['58i3',voter_list[52]];
+ids[53]=['5e94',voter_list[53]];
+ids[54]=['6t05',voter_list[54]];
+ids[55]=['61t6',voter_list[55]];
+ids[56]=['62g7',voter_list[56]];
+ids[57]=['63d8',voter_list[57]];
+ids[58]=['64d9',voter_list[58]];
+ids[59]=['66w0',voter_list[59]];
+ids[60]=['671w',voter_list[60]];
+ids[61]=['68s2',voter_list[61]];
+ids[62]=['693a',voter_list[62]];
+ids[63]=['7d04',voter_list[63]];
+ids[64]=['71c5',voter_list[64]];
+ids[65]=['726c',voter_list[65]];
+ids[66]=['73a7',voter_list[66]];
+ids[67]=['748d',voter_list[67]];
+ids[68]=['759e',voter_list[68]];
+ids[69]=['77p0',voter_list[69]];
+ids[70]=['781j',voter_list[70]];
+ids[71]=['7g92',voter_list[71]];
+ids[72]=['80g3',voter_list[72]];
+ids[73]=['814c',voter_list[73]];
+ids[74]=['825c',voter_list[74]];
+ids[75]=['83d6',voter_list[75]];
+ids[76]=['8x47',voter_list[76]];
+ids[77]=['85d8',voter_list[77]];
+ids[78]=['86z9',voter_list[78]];
+ids[79]=['880x',voter_list[79]];
+ids[80]=['89g1',voter_list[80]];
+ids[81]=['9e02',voter_list[81]];
+ids[82]=['91u3',voter_list[82]];
+ids[83]=['92d4',voter_list[83]];
+ids[84]=['9y35',voter_list[84]];
+ids[85]=['94x6',voter_list[85]];
+ids[86]=['9q57',voter_list[86]];
+ids[87]=['96s8',voter_list[87]];
+ids[88]=['9w79',voter_list[88]];
+ids[89]=['99x0',voter_list[89]];
+ids[90]=['1q61',voter_list[90]];
+ids[91]=['101t2',voter_list[91]];
+ids[92]=['102f3',voter_list[92]];
+ids[93]=['10w34',voter_list[93]];
+ids[94]=['104w5',voter_list[94]];
+ids[95]=['10g56',voter_list[95]];
+ids[96]=['106z7',voter_list[96]];
+ids[97]=['107r8',voter_list[97]];
+ids[98]=['108d9',voter_list[98]];
+ids[99]=['110e0',voter_list[99]];
+ids[100]=['111j1',voter_list[100]];
+ids[101]=['11s22',voter_list[101]];
+ids[102]=['1b133',voter_list[102]];
+ids[103]=['114q4',voter_list[103]];
+ids[104]=['11k55',voter_list[104]];
+ids[105]=['116r6',voter_list[105]];
+ids[106]=['117f7',voter_list[106]];
+ids[107]=['118i8',voter_list[107]];
+ids[108]=['119j9',voter_list[108]];
+ids[109]=['12y10',voter_list[109]];
+ids[110]=['1s221',voter_list[110]];
+ids[111]=['12a32',voter_list[111]];
+ids[112]=['1243a',voter_list[112]];
+ids[113]=['1a254',voter_list[113]];
+ids[114]=['12d65',voter_list[114]];
+ids[115]=['127t6',voter_list[115]];
+ids[116]=['128c7',voter_list[116]];
+ids[117]=['1v298',voter_list[117]];
+ids[118]=['130f9',voter_list[118]];
+ids[119]=['132e0',voter_list[119]];
+ids[120]=['13r31',voter_list[120]];
+ids[121]=['13a42',voter_list[121]];
+ids[122]=['135w3',voter_list[122]];
+ids[123]=['1w364',voter_list[123]];
+ids[124]=['137c5',voter_list[124]];
+ids[125]=['13y86',voter_list[125]];
+ids[126]=['139p7',voter_list[126]];
+ids[127]=['140w8',voter_list[127]];
+ids[128]=['14w19',voter_list[128]];
+ids[129]=['1q430',voter_list[129]];
+ids[130]=['144q1',voter_list[130]];
+ids[131]=['14f52',voter_list[131]];
+ids[132]=['14u63',voter_list[132]];
+ids[133]=['133',voter_list[133]];
+ids[134]=['1608',voter_list[134]];
+ids[135]=['1620',voter_list[135]];
+ids[136]=['1632',voter_list[136]];
+ids[137]=['1644',voter_list[137]];
+ids[138]=['1656',voter_list[138]];
+ids[139]=['1668',voter_list[139]];
+ids[140]=['1680',voter_list[140]];
+ids[141]=['1692',voter_list[141]];
+ids[142]=['1704',voter_list[142]];
+ids[143]=['1716',voter_list[143]];
+ids[144]=['1728',voter_list[144]];
+ids[145]=['1740',voter_list[145]];
+ids[146]=['1752',voter_list[146]];
+ids[147]=['1764',voter_list[147]];
+ids[148]=['1776',voter_list[148]];
+ids[149]=['1788',voter_list[149]];
+ids[150]=['1800',voter_list[150]];
+ids[151]=['1812',voter_list[151]];
+ids[152]=['1824',voter_list[152]];
+ids[153]=['1836',voter_list[153]];
+ids[154]=['1848',voter_list[154]];
+ids[155]=['1860',voter_list[155]];
+ids[156]=['1872',voter_list[156]];
+ids[157]=['1884',voter_list[157]];
+ids[158]=['1896',voter_list[158]];
+ids[159]=['1908',voter_list[159]];
+ids[160]=['1920',voter_list[160]];
+ids[161]=['1932',voter_list[161]];
+ids[162]=['1944',voter_list[162]];
+ids[163]=['1956',voter_list[163]];
+ids[164]=['1968',voter_list[164]];
+ids[165]=['1980',voter_list[165]];
+ids[166]=['1992',voter_list[166]];
+ids[167]=['2004',voter_list[167]];
+ids[168]=['2016',voter_list[168]];
+ids[169]=['2028',voter_list[169]];
+ids[170]=['2040',voter_list[170]];
+ids[171]=['2052',voter_list[171]];
+ids[172]=['2064',voter_list[172]];
+ids[173]=['2076',voter_list[173]];
+ids[174]=['2088',voter_list[174]];
+ids[175]=['2100',voter_list[175]];
+ids[176]=['2112',voter_list[176]];
+ids[177]=['2124',voter_list[177]];
+ids[178]=['2136',voter_list[178]];
+ids[179]=['2148',voter_list[179]];
+ids[180]=['2160',voter_list[180]];
+ids[181]=['2172',voter_list[181]];
+ids[182]=['2184',voter_list[182]];
+ids[183]=['2196',voter_list[183]];
+ids[184]=['2208',voter_list[184]];
+ids[185]=['2220',voter_list[185]];
+ids[186]=['2232',voter_list[186]];
+ids[187]=['2244',voter_list[187]];
+ids[188]=['2256',voter_list[188]];
+ids[189]=['2268',voter_list[189]];
+ids[190]=['2280',voter_list[190]];
+ids[191]=['2292',voter_list[191]];
+ids[192]=['2304',voter_list[192]];
+ids[193]=['2316',voter_list[193]];
+ids[194]=['2328',voter_list[194]];
+ids[195]=['2340',voter_list[195]];
+ids[196]=['2352',voter_list[196]];
+ids[197]=['2364',voter_list[197]];
+ids[198]=['2376',voter_list[198]];
+ids[199]=['2388',voter_list[199]];
+ids[200]=['2400',voter_list[200]];
+ids[201]=['2412',voter_list[201]];
+ids[202]=['2424',voter_list[202]];
+ids[203]=['2436',voter_list[203]];
+ids[204]=['2448',voter_list[204]];
+ids[205]=['2460',voter_list[205]];
+ids[206]=['2472',voter_list[206]];
+ids[207]=['2484',voter_list[207]];
+ids[208]=['2496',voter_list[208]];
+ids[209]=['2508',voter_list[209]];
+ids[210]=['2520',voter_list[210]];
+ids[211]=['2532',voter_list[211]];
+ids[212]=['2544',voter_list[212]];
+ids[213]=['2556',voter_list[213]];
+ids[214]=['2568',voter_list[214]];
+ids[215]=['2580',voter_list[215]];
+ids[216]=['2592',voter_list[216]];
+ids[217]=['2604',voter_list[217]];
+ids[218]=['2616',voter_list[218]];
+ids[219]=['2628',voter_list[219]];
+ids[220]=['2640',voter_list[220]];
+ids[221]=['2652',voter_list[221]];
+ids[222]=['2664',voter_list[222]];
+ids[223]=['2676',voter_list[223]];
+ids[224]=['2688',voter_list[224]];
+ids[225]=['2700',voter_list[225]];
+ids[226]=['2712',voter_list[226]];
+ids[227]=['2724',voter_list[227]];
+ids[228]=['2736',voter_list[228]];
+ids[229]=['2748',voter_list[229]];
+ids[230]=['2760',voter_list[230]];
+ids[231]=['2772',voter_list[231]];
+ids[232]=['2784',voter_list[232]];
+ids[233]=['2796',voter_list[233]];
+ids[234]=['2808',voter_list[234]];
+ids[235]=['2820',voter_list[235]];
+ids[236]=['2832',voter_list[236]];
+ids[237]=['2844',voter_list[237]];
+ids[238]=['2856',voter_list[238]];
+ids[239]=['2868',voter_list[239]];
+ids[240]=['2880',voter_list[240]];
+ids[241]=['2892',voter_list[241]];
+ids[242]=['2904',voter_list[242]];
+ids[243]=['2916',voter_list[243]];
+ids[244]=['2928',voter_list[244]];
+ids[245]=['2940',voter_list[245]];
+ids[246]=['2952',voter_list[246]];
+ids[247]=['2964',voter_list[247]];
+ids[248]=['2976',voter_list[248]];
+ids[249]=['2988',voter_list[249]];
+ids[250]=['3000',voter_list[250]];
+ids[251]=['3012',voter_list[251]];
+ids[252]=['3024',voter_list[252]];
+ids[253]=['3036',voter_list[253]];
+ids[254]=['3048',voter_list[254]];
+ids[255]=['3060',voter_list[255]];
+ids[256]=['3072',voter_list[256]];
+ids[257]=['3084',voter_list[257]];
+ids[258]=['3096',voter_list[258]];
+ids[259]=['3108',voter_list[259]];
+ids[260]=['3120',voter_list[260]];
+ids[261]=['3132',voter_list[261]];
+ids[262]=['3144',voter_list[262]];
+ids[263]=['3156',voter_list[263]];
+ids[264]=['3168',voter_list[264]];
+ids[265]=['3180',voter_list[265]];
+ids[266]=['3192',voter_list[266]];
+ids[267]=['3204',voter_list[267]];
+ids[268]=['3216',voter_list[268]];
+ids[269]=['3228',voter_list[269]];
+ids[270]=['3240',voter_list[270]];
+ids[271]=['3252',voter_list[271]];
+ids[272]=['3264',voter_list[272]];
+ids[273]=['3276',voter_list[273]];
+ids[274]=['3288',voter_list[274]];
+ids[275]=['3300',voter_list[275]];
+ids[276]=['3312',voter_list[276]];
+ids[277]=['3324',voter_list[277]];
+ids[278]=['3336',voter_list[278]];
+ids[279]=['3348',voter_list[279]];
+ids[280]=['3360',voter_list[280]];
+ids[281]=['3372',voter_list[281]];
+ids[282]=['3384',voter_list[282]];
+ids[283]=['3396',voter_list[283]];
+ids[284]=['3408',voter_list[284]];
+ids[285]=['3420',voter_list[285]];
+ids[286]=['3432',voter_list[286]];
+ids[287]=['3444',voter_list[287]];
+ids[288]=['3456',voter_list[288]];
+ids[289]=['3468',voter_list[289]];
+ids[290]=['3480',voter_list[290]];
+ids[291]=['3492',voter_list[291]];
+ids[292]=['3504',voter_list[292]];
+ids[293]=['3516',voter_list[293]];
+ids[294]=['3528',voter_list[294]];
+ids[295]=['3540',voter_list[295]];
+ids[296]=['3552',voter_list[296]];
+ids[297]=['3564',voter_list[297]];
+ids[298]=['3576',voter_list[298]];
+ids[299]=['3588',voter_list[299]];
+ids[300]=['3600',voter_list[300]];
+ids[301]=['3612',voter_list[301]];
+ids[302]=['3624',voter_list[302]];
+ids[303]=['3636',voter_list[303]];
+ids[304]=['3648',voter_list[304]];
+ids[305]=['3660',voter_list[305]];
+ids[306]=['3672',voter_list[306]];
+ids[307]=['3684',voter_list[307]];
+ids[308]=['3696',voter_list[308]];
+ids[309]=['3708',voter_list[309]];
+ids[310]=['3720',voter_list[310]];
+ids[311]=['3732',voter_list[311]];
+ids[312]=['3744',voter_list[312]];
+ids[313]=['3756',voter_list[313]];
+ids[314]=['3768',voter_list[314]];
+ids[315]=['3780',voter_list[315]];
+ids[316]=['3792',voter_list[316]];
+ids[317]=['3804',voter_list[317]];
+ids[318]=['3816',voter_list[318]];
+ids[319]=['3828',voter_list[319]];
+ids[320]=['3840',voter_list[320]];
+ids[321]=['3852',voter_list[321]];
+ids[322]=['3864',voter_list[322]];
+ids[323]=['3876',voter_list[323]];
+ids[324]=['3888',voter_list[324]];
+ids[325]=['3900',voter_list[325]];
+ids[326]=['3912',voter_list[326]];
+ids[327]=['3924',voter_list[327]];
+ids[328]=['3936',voter_list[328]];
+ids[329]=['3948',voter_list[329]];
+ids[330]=['3960',voter_list[330]];
+ids[331]=['3972',voter_list[331]];
+ids[332]=['3984',voter_list[332]];
+ids[333]=['3996',voter_list[333]];
+ids[334]=['4008',voter_list[334]];
+ids[335]=['4020',voter_list[335]];
+ids[336]=['4032',voter_list[336]];
+ids[337]=['4044',voter_list[337]];
+ids[338]=['4056',voter_list[338]];
+ids[339]=['4068',voter_list[339]];
+ids[340]=['4080',voter_list[340]];
+ids[341]=['4092',voter_list[341]];
+ids[342]=['4104',voter_list[342]];
+ids[343]=['4116',voter_list[343]];
+ids[344]=['4128',voter_list[344]];
+ids[345]=['4140',voter_list[345]];
+ids[346]=['4152',voter_list[346]];
+ids[347]=['4164',voter_list[347]];
+ids[348]=['4176',voter_list[348]];
+ids[349]=['4188',voter_list[349]];
+ids[350]=['4200',voter_list[350]];
+ids[351]=['4212',voter_list[351]];
+ids[352]=['4224',voter_list[352]];
+ids[353]=['4236',voter_list[353]];
+ids[354]=['4248',voter_list[354]];
+ids[355]=['4260',voter_list[355]];
+ids[356]=['4272',voter_list[356]];
+ids[357]=['4284',voter_list[357]];
+ids[358]=['4296',voter_list[358]];
+ids[359]=['4308',voter_list[359]];
+ids[360]=['4320',voter_list[360]];
+ids[361]=['4332',voter_list[361]];
+ids[362]=['4344',voter_list[362]];
+ids[363]=['4356',voter_list[363]];
+ids[364]=['4368',voter_list[364]];
+ids[365]=['4380',voter_list[365]];
+ids[366]=['4392',voter_list[366]];
+ids[367]=['4404',voter_list[367]];
+ids[368]=['4416',voter_list[368]];
+ids[369]=['4428',voter_list[369]];
+ids[370]=['4440',voter_list[370]];
+ids[371]=['4452',voter_list[371]];
+ids[372]=['4464',voter_list[372]];
+ids[373]=['4476',voter_list[373]];
+ids[374]=['4488',voter_list[374]];
+ids[375]=['4500',voter_list[375]];
+ids[376]=['4512',voter_list[376]];
+ids[377]=['4524',voter_list[377]];
+ids[378]=['4536',voter_list[378]];
+ids[379]=['4548',voter_list[379]];
+ids[380]=['4560',voter_list[380]];
+ids[381]=['4572',voter_list[381]];
+ids[382]=['4584',voter_list[382]];
+ids[383]=['4596',voter_list[383]];
+ids[384]=['4608',voter_list[384]];
+ids[385]=['4620',voter_list[385]];
+ids[386]=['4632',voter_list[386]];
+ids[387]=['4644',voter_list[387]];
+ids[388]=['4656',voter_list[388]];
+ids[389]=['4668',voter_list[389]];
+ids[390]=['4680',voter_list[390]];
+ids[391]=['4692',voter_list[391]];
+ids[392]=['4704',voter_list[392]];
+ids[393]=['4716',voter_list[393]];
+ids[394]=['4728',voter_list[394]];
+ids[395]=['4740',voter_list[395]];
+ids[396]=['4752',voter_list[396]];
+ids[397]=['4764',voter_list[397]];
+ids[398]=['4776',voter_list[398]];
+ids[399]=['4788',voter_list[399]];
+ids[400]=['4800',voter_list[400]];
+ 
+ var inpt=prompt('Enter voter Id please');
+ for(var i=0;i<401;i++)   //change to total number of voters
+ {
+  if(inpt==ids[i][0] && parseInt(localStorage.getItem(voter_list[i])) == 1)
+  {
+	//for checking if the voter is in the list and redirecting to the voting page.
+   localStorage.setItem(voter_list[i],0);
+   localStorage.cheat=1;
+   window.location.replace("elec.html");
+   log_flag=1;
+  } 
+ }
+ if(log_flag == 0)
+  window.location.replace("html.html");
+}
+
+ </script>
+<body bgcolor=#facc80 oncontextmenu="return false" id="b1"">
+<br><br>
+
+<br><br<br><br><br>
+<h1 style="text-align:center;font-size:8em;color:red;" id="a1"> ashoka </h1>
+<h1 style="margin-left:7.5em;font-size:4em;display:inline-block;position:absolute;margin-top:-1.5em;">ELECTIONS</h1>
+
+<br><br><br><br><br><br><br><br>
+<h2 style="display:block;margin:auto;text-align:center;font-size:1.5em;">Developed by Paras Bhattrai </h2>
+</body>
+</html>

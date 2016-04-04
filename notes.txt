@@ -1,0 +1,42 @@
+independants are rss
+ashok chakra is prakrit
+
+total 53
+
+col1 
+r2,r2--r6
+rss() //new
+rssm() //new
+s4()-for select all //new
+party4
+
+col2
+p1,p2--p13
+asc()
+assm()
+s1()
+party1
+
+col3
+11,12--25
+uni()
+uni1()
+s2()
+party2
+
+col4
+d1,d2--d15
+dhm()
+dhm1()
+s3()
+party3
+
+col5
+111,112--114
+is()
+is1()
+s5()
+party5
+
+
+watch for 13 in uni() or arrays

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+ <script>
+  document.write(localStorage.getItem('ip1')+'<br>'+localStorage.ip2+'<br>'+localStorage.ip3+'<br>'+localStorage.ip4);
+ 
+ 
+ // localStorage.setItem('hello',0);
+ // localStorage.hello=0;
+  localStorage.setItem('hello',parseInt(localStorage.getItem('hello'))+1);
+  document.write(localStorage.getItem('hello')+'<br>');
+  
+  
+  //party1
+  var chkv=['c1p1','c2p1','c3p1','c4p1','c5p1','c6p1','c10p1','c7p1','c8p1','c9p1']; //ls party 1 
+  for(var a=0;a<10;a++)
+  document.write('<br>'+localStorage.getItem(chkv[a]));
+  document.write('<br>Party1 : '+localStorage.party1+'<br>');
+  var univ=['c1p2','c2p2','c3p2','c4p2','c5p2','c6p2','c7p2','c8p2','c9p2','c10p2','c11p2','c12p2','c13p2','c14p2','c15p2'];
+  for(var a=0;a<15;a++)
+  document.write('<br>'+localStorage.getItem(univ[a]));
+  document.write('<br>Party 2 :'+localStorage.party2);
+  var dhmv=['c1p3','c2p3','c3p3','c4p3'];
+  for(var a=0;a<4;a++)
+  document.write('<br>'+localStorage.getItem(dhmv[a]));
+  document.write('<br>Party 3 :'+localStorage.party3);
+ </script>
+</body>
+</html>
