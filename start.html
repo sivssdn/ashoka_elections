@@ -694,7 +694,24 @@ ids[398]=['4776',voter_list[398]];
 ids[399]=['4788',voter_list[399]];
 ids[400]=['4800',voter_list[400]];
  
- var inpt=prompt('Enter voter Id please');
+ 
+ //check if user has clicked "prevent this dialogue box checkbox"
+
+    var open_time = new Date();
+    var result = inpt=prompt('Enter voter Id please');;
+    var close_time = new Date();
+
+    if (close_time - open_time < 100) {
+        
+		//user has clicked the checkbox preventing prompt box
+		window.open("start.html","_blank");
+		this.window.close();
+		window.focus();
+    }//else eveything's fine,continue execution
+	else{
+
+ 
+
  for(var i=0;i<401;i++)   //change to total number of voters
  {
   if(inpt==ids[i][0] && parseInt(localStorage.getItem(voter_list[i])) == 1)
@@ -708,8 +725,8 @@ ids[400]=['4800',voter_list[400]];
  }
  if(log_flag == 0)
   window.location.replace("html.html");
-}
-
+} //else end
+}//function end
  </script>
 <body bgcolor=#facc80 oncontextmenu="return false" id="b1"">
 <br><br>
