@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+
+</body>
+<script>
+	
+	var characters = "abcdefghijklmnopqrstuvwxyz";
+	var charStart,charEnd,newId,ids=[];
+	
+	for(var i=0;i<720;i++){
+		charStart = characters.charAt(Math.floor(Math.random()*characters.length));
+		charEnd = characters.charAt(Math.floor(Math.random()*characters.length));
+		//document.write(charStart+Math.floor(Math.random()*100)+charEnd+"<br>");
+		newId = charStart+Math.floor(Math.random()*100)+charEnd;
+		if(!ids.includes(newId)){ //if array doesn't contain the element, then add to it the new id
+			ids[i]=newId;
+		}else{
+			i--;
+			continue;
+		}
+		//document.write("ids["+i+"]=['11a',voter_list["+i+"]];");
+	}
+	//print ids
+	for(var i=0;i<720;i++){
+	document.write(ids[i]+'<br>');
+	}
+	document.write("<br><br>");
+	for(var i=0;i<720;i++){
+	document.write("ids["+i+"]=['"+ids[i]+"',voter_list["+i+"]];<br>");
+	}
+	
+	/*
+	document.write('var voter_list=new Array(');
+	for(var i=0;i<=720;i++){
+		document.write("'"+i+"',");
+	}
+	document.write(");");
+	document.write("<br>sdjh");
+	*/
+</script>
+</html>

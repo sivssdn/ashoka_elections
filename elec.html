@@ -10,10 +10,25 @@
 	 localStorage.cheat=0;
 	 function sure()
 	 {
-	  var proceed=confirm("Are you sure ? ");
+	 var open_time = new Date();
+     var proceed=confirm("Are you sure ? ");
+     var close_time = new Date();
+
+    if (close_time - open_time < 100) {
+        
+		//user has clicked the checkbox preventing prompt box
+		window.open("start.html","_blank");
+		this.window.close();
+		window.focus();
+    }else{
+	 
+	 
 	  if(proceed==true)
 	  cl();
+	  
+	  }
 	 }
+	 
 	</script>
    <meta name="viewport" content="width=device-width">
    <style type="text/css">
@@ -119,26 +134,18 @@
    </style>
   </head>
   <body oncontextmenu="return false;" style="font-family:Calibri;" bgcolor="white">
-    <div id="top">Ashoka Elections</div>
+	<!--uncomment top for animation-->
+  <!--     <div id="top">Ashoka Elections</div> -->
 	<div id="col1">
 	<!--Independents-->
 	 
 	 <table style="height:100%;width:100%;border:2px solid white;">
 		<tr id="head">
 			<th colspan="2" style="text-align:left;">
-				<input type="checkbox" onclick="rss();rssm();" style="height:2.2em;width:2.2em;vertical-align:middle;" id="s4">
-				<span style="font-size:1.3em;display:inline-block;">Rashtriya Swag Sangh</span>
+				 <!-- <input type="checkbox" onclick="rss();rssm();" style="height:2.2em;width:2.2em;vertical-align:middle;" id="s4"> -->
+				<span style="font-size:1.3em;display:inline-block;"> &nbsp;Independents</span>
 				<!--<img src="ash.png" style="position:absolute;height:8.4%;width:7%;left:41.9%;top:2.4%;vertical-align:middle;">-->
 			</th>
-		</tr>
-		
-		<tr style="height:6%;">
-			<td id="left">
-				<input type="checkbox" onchange="rssm()" id="r1">
-			</td>
-			<td>
-				Kohinoor Mukherjee
-			</td>
 		</tr>
 		
 		<tr style="height:6%;">
@@ -146,7 +153,7 @@
 				<input type="checkbox" onchange="rssm()" id="r2">
 			</td>
 			<td>
-				 Koishore Roy
+				 Aarushi Aggarwal
 			</td>
 		</tr>
 		
@@ -155,39 +162,12 @@
 				<input type="checkbox" onchange="rssm()" id="r3">
 			</td>
 			<td>
-				Iman Barua
-			</td>
-		</tr>
-		
-		<tr style="height:6%;">
-			<td id="left">
-				<input type="checkbox" onchange="rssm()" id="r4">
-			</td>
-			<td>
-				Raghu Ghanshyam
-			</td>
-		</tr>
-		
-		<tr style="height:6%;">
-			<td id="left">
-				<input type="checkbox" onchange="rssm()" id="r5">
-			</td>
-			<td>
-				Pranav D. Kuriakose
-			</td>
-		</tr>
-		
-		<tr style="height:6%;">
-			<td id="left">
-				<input type="checkbox" onchange="rssm()" id="r6">
-			</td>
-			<td>
-				Raghav Mittal
+				Srishti Bansal
 			</td>
 		</tr>
 		
 		<!--left over space manager-->
-		<tr style="height:30%;">
+		<tr style="height:54%;">
 			<td colspan="2"></td>
 		</tr>
 		<tr style="height:19%">
@@ -221,7 +201,7 @@
 				<input type="checkbox" onchange="assm()" id="p1">
 			</td>
 			<td>
-				Shreyas Shende
+				Arush Pandey
 			</td>
 		</tr>
 		
@@ -230,7 +210,7 @@
 				<input type="checkbox" onchange="assm()" id="p2">
 			</td>
 			<td>
-				Harish Sai 
+				Nayani Goyal
 			</td>
 		</tr>
 		
@@ -239,7 +219,7 @@
 				<input type="checkbox" onchange="assm()" id="p3">
 			</td>
 			<td>
-				Mcpherlain MJ Chungu 
+				Ritunjay Shekhar
 			</td>
 		</tr>
 		
@@ -248,7 +228,7 @@
 				<input type="checkbox" onchange="assm()" id="p4">
 			</td>
 			<td>
-				Manjari Sahay
+				Nivedita Joon
 			</td>
 		</tr>
 		
@@ -257,7 +237,7 @@
 				<input type="checkbox" onchange="assm()" id="p5">
 			</td>
 			<td>
-				Apuroop Sethupathy
+				Shreyas Shende
 			</td>
 		</tr>
 		
@@ -266,7 +246,7 @@
 				<input type="checkbox" onchange="assm()" id="p6">
 			</td>
 			<td>
-				Srishti Bansal
+				Shivani Bajaj
 			</td>
 		</tr>
 		
@@ -275,7 +255,7 @@
 				<input type="checkbox" onchange="assm()" id="p7">
 			</td>
 			<td>
-				Urvin Soneta
+				Krishna Vohra
 			</td>
 		</tr>
 		
@@ -284,7 +264,7 @@
 				<input type="checkbox" onchange="assm()" id="p8">
 			</td>
 			<td>
-				Kaagni Harekal
+				Edwin Joseph
 			</td>
 		</tr>
 		
@@ -293,7 +273,7 @@
 				<input type="checkbox" onchange="assm()" id="p9">
 			</td>
 			<td>
-				P. Chirag Chinnappa
+				Jayanti Jha
 			</td>
 		</tr>
 		
@@ -302,7 +282,7 @@
 				<input type="checkbox" onchange="assm()" id="p10">
 			</td>
 			<td>
-				Shivangi Tikekar
+				Riya Singh
 			</td>
 		</tr>
 		<tr style="height:6%;">
@@ -310,7 +290,7 @@
 				<input type="checkbox" onchange="assm()" id="p11">
 			</td>
 			<td>
-				Ayan Tandon
+				Rohan Poddar
 			</td>
 		</tr>
 		<tr style="height:6%;">
@@ -318,7 +298,7 @@
 				<input type="checkbox" onchange="assm()" id="p12">
 			</td>
 			<td>
-				Ankita Nanda
+				Swasti Acharya
 			</td>
 		</tr>
 		<tr style="height:6%;">
@@ -326,13 +306,26 @@
 				<input type="checkbox" onchange="assm()" id="p13">
 			</td>
 			<td>
-				Swasti Acharya
+				Vedika Gupta
+			</td>
+		</tr>
+		<tr style="height:6%;">
+			<td id="left">
+				<input type="checkbox" onchange="assm()" id="p14">
+			</td>
+			<td>
+				Sheikh Safwan
+			</td>
+		</tr>
+		<tr style="height:6%;">
+			<td id="left">
+				<input type="checkbox" onchange="assm()" id="p15">
+			</td>
+			<td>
+				Anshika Jain
 			</td>
 		</tr>
 		
-		<tr style="height:12%;">
-			<td colspan="2"></td>
-		</tr>
 		
 	 </table>	
 	</div>
@@ -344,7 +337,7 @@
 		<tr id="head">
 			<th colspan="2" style="text-align:left;">
 				<input type="checkbox" onclick="uni();uni1();" style="height:2.2em;width:2.2em;vertical-align:middle;" id="s2">
-				<span style="font-size:1.4em;">United Ashoka</span>
+				<span style="font-size:1.4em;">Samiti</span>
 				<!--<img src="un.png" style="height:8.2%;width:7%;vertical-align:middle;position:absolute;top:2.5%;left:67%;">-->
 			</th>
 		</tr>
@@ -354,7 +347,7 @@
 				<input type="checkbox" onchange="uni1()" id="11">
 			</td>
 			<td>
-				Bhavye Mittal
+				Zoheb Bedi
 			</td>
 		</tr>
 		
@@ -363,7 +356,7 @@
 				<input type="checkbox" onchange="uni1()" id="12">
 			</td>
 			<td>
-				Ribhav Dhingra
+				Pixie
 			</td>
 		</tr>
 		
@@ -372,7 +365,7 @@
 				<input type="checkbox" onchange="uni1()" id="13">
 			</td>
 			<td>
-				Zoheb Bedi
+				Dabwitso Zumani
 			</td>
 		</tr>
 		
@@ -381,7 +374,7 @@
 				<input type="checkbox" onchange="uni1()" id="14">
 			</td>
 			<td>
-				Ahaan Ghosh
+				Ishita Sehgal
 			</td>
 		</tr>
 		
@@ -390,7 +383,7 @@
 				<input type="checkbox" onchange="uni1()" id="15">
 			</td>
 			<td>
-				Vansh Choudhary
+				Angad Singh Sodhi
 			</td>
 		</tr>
 		
@@ -399,7 +392,7 @@
 				<input type="checkbox" onchange="uni1()" id="16">
 			</td>
 			<td>
-				Aakanksha Jadhav 
+				Shaan Shah
 			</td>
 		</tr>
 		
@@ -408,7 +401,7 @@
 				<input type="checkbox" onchange="uni1()" id="17">
 			</td>
 			<td>
-				Pavni Kansal 
+				Shrey Gupta
 			</td>
 		</tr>
 		
@@ -417,7 +410,7 @@
 				<input type="checkbox" onchange="uni1()" id="18">
 			</td>
 			<td>
-				Jibraan Mansoor
+				Medha Prasanna
 			</td>
 		</tr>
 		
@@ -426,7 +419,7 @@
 				<input type="checkbox" onchange="uni1()" id="19">
 			</td>
 			<td>
-				Akhil Vohra
+				Gokul Prabhu
 			</td>
 		</tr>
 		
@@ -435,7 +428,7 @@
 				<input type="checkbox" onchange="uni1()" id="20">
 			</td>
 			<td>
-				Shaesta Mallick
+				Tarini Nath
 			</td>
 		</tr>
 		
@@ -444,7 +437,7 @@
 				<input type="checkbox" onchange="uni1()" id="21">
 			</td>
 			<td>
-				Meher Sachdeva
+				Abdur Rahman
 			</td>
 		</tr>
 		
@@ -453,7 +446,7 @@
 				<input type="checkbox" onchange="uni1()" id="22">
 			</td>
 			<td>
-				Pranjal Bhatt
+				Sunaina Sibbal
 			</td>
 		</tr>
 		
@@ -462,7 +455,7 @@
 				<input type="checkbox" onchange="uni1()" id="23">
 			</td>
 			<td>
-				Isherjeet Singh
+				Vihan Singh
 			</td>
 		</tr>
 		
@@ -471,7 +464,7 @@
 				<input type="checkbox" onchange="uni1()" id="24">
 			</td>
 			<td>
-				Akshat Vachher
+				Diya Singh
 			</td>
 		</tr>
 		
@@ -480,7 +473,7 @@
 				<input type="checkbox" onchange="uni1()" id="25">
 			</td>
 			<td>
-				Govind Narayan
+				Kneev Singh
 			</td>
 		</tr>
 		
@@ -504,7 +497,7 @@
 				<input type="checkbox" onchange="dhm1()" id="d1">
 			</td>
 			<td>
-				KC Sachin
+				Sumer Sharma
 			</td>
 		</tr>
 		
@@ -513,7 +506,7 @@
 				<input type="checkbox" onchange="dhm1()" id="d2">
 			</td>
 			<td>
-				Sanat Sogani
+				Kc Sachin
 			</td>
 		</tr>
 		
@@ -522,7 +515,7 @@
 				<input type="checkbox" onchange="dhm1()" id="d3">
 			</td>
 			<td>
-				Samridh Kudesia
+				Vishesh Guru
 			</td>
 		</tr>
 		
@@ -539,7 +532,7 @@
 				<input type="checkbox" onchange="dhm1()" id="d5">
 			</td>
 			<td>
-				Shivani Mangal
+				Samyak Shami
 			</td>
 		</tr>
 		<tr style="height:6%;">
@@ -547,7 +540,7 @@
 				<input type="checkbox" onchange="dhm1()" id="d6">
 			</td>
 			<td>
-				Hamza Farooqui
+				Dhruv Agarwal
 			</td>
 		</tr>
 		<tr style="height:6%;">
@@ -555,7 +548,7 @@
 				<input type="checkbox" onchange="dhm1()" id="d7">
 			</td>
 			<td>
-				Nishant Kauntia
+				Sita Sanjivini
 			</td>
 		</tr>
 		<tr style="height:6%;">
@@ -563,7 +556,7 @@
 				<input type="checkbox" onchange="dhm1()" id="d8">
 			</td>
 			<td>
-				Sanchit Bansal
+				Jyoti Shankar Nayak
 			</td>
 		</tr>
 		<tr style="height:6%;">
@@ -571,7 +564,7 @@
 				<input type="checkbox" onchange="dhm1()" id="d9">
 			</td>
 			<td>
-				Zahida Ishaq War
+				Sukanya Janardhan
 			</td>
 		</tr>
 		<tr style="height:6%;">
@@ -579,7 +572,7 @@
 				<input type="checkbox" onchange="dhm1()" id="d10">
 			</td>
 			<td>
-				Sreeradh Radhakrishnan
+				Sanya Sharma
 			</td>
 		</tr>
 		<tr style="height:6%;">
@@ -587,7 +580,7 @@
 				<input type="checkbox" onchange="dhm1()" id="d11">
 			</td>
 			<td>
-				Aastha Girotra
+				Vineet Reddy
 			</td>
 		</tr>
 		<tr style="height:6%;">
@@ -595,7 +588,7 @@
 				<input type="checkbox" onchange="dhm1()" id="d12">
 			</td>
 			<td>
-				Amalta Gupta 
+				Saddam Hussein 
 			</td>
 		</tr>
 		<tr style="height:6%;">
@@ -603,7 +596,7 @@
 				<input type="checkbox" onchange="dhm1()" id="d13">
 			</td>
 			<td>
-				Prateek Pillai
+				Sindhoora Ganesh
 			</td>
 		</tr>
 		<tr style="height:6%;">
@@ -611,7 +604,7 @@
 				<input type="checkbox" onchange="dhm1()" id="d14">
 			</td>
 			<td>
-				Mayukh Nair
+				Sunalika Singh
 			</td>
 		</tr>
 		<tr style="height:6%;">
@@ -619,7 +612,7 @@
 				<input type="checkbox" onchange="dhm1()" id="d15">
 			</td>
 			<td>
-				Hevin Chopra
+				Meera Damarajju
 			</td>
 		</tr>
 		
@@ -634,50 +627,12 @@
 	
 	<div id="col3">
 	  <table style="height:100%;width:100%;border:2px solid white;">
-		<tr id="head">
-			<th colspan="2" style="text-align:left;">
-				<input type="checkbox" onclick="is();ism();" style="height:2.2em;width:2.2em;vertical-align:middle;" id="s5">
-				<span style="font-size:1.4em;">I.S.I.S.</span>
-				<!--<img src="un.png" style="height:8.2%;width:7%;vertical-align:middle;position:absolute;top:2.5%;left:67%;">-->
-			</th>
+		<tr style="height:80%;">
+		<td>
+			<strong>Click on the 'Cast my vote' button below to confirm your choice.</strong>
+		</td>
 		</tr>
-		
-		<tr style="height:6%;">
-			<td id="left">
-				<input type="checkbox" onchange="ism()" id="111">
-			</td>
-			<td>
-				Gurasheesh Singh 
-			</td>
-		</tr>
-		
-		<tr style="height:6%;">
-			<td id="left">
-				<input type="checkbox" onchange="ism()" id="112">
-			</td>
-			<td>
-				Dhruv Chakraverti 
-			</td>
-		</tr>
-		<tr style="height:6%;">
-			<td id="left">
-				<input type="checkbox" onchange="ism()" id="113">
-			</td>
-			<td>
-				Sachin Mehra
-			</td>
-		</tr>
-		
-		<tr style="height:6%;">
-			<td id="left">
-				<input type="checkbox" onchange="ism()" id="114">
-			</td>
-			<td>
-				Akshay Malhotra 
-			</td>
-		</tr>
-		
-		<tr style="height:66%;">
+		<tr style="height:80%;">
 			<td colspan="2">
 				<button onclick="sure();" style="position:absolute;right:0.9%;bottom:0.9%;height:10%;width:19%;font-size:1.2em;">Cast my vote</button>
 			</td>

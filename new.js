@@ -1,16 +1,16 @@
 function vote()
 {
  
- var r=['r1','r2','r3','r4','r5','r6'];
- var chk=['p1','p2','p3','p4','p5','p6','p7','p8','p9','p10','p11','p12','p13'];
+ var r=['r2','r3']; //now independent (-3)
+ var chk=['p1','p2','p3','p4','p5','p6','p7','p8','p9','p10','p11','p12','p13','p14','p15']; // +2
  var uni=['11','12','13','14','15','16','17','18','19','20','21','22','23','24','25'];
  var dhm=['d1','d2','d3','d4','d5','d6','d7','d8','d9','d10','d11','d12','d13','d14','d15'];
- var is=['111','112','113','114'];
+ var is=['111','112','113','114']; //not present  -4
  
- var chkv=['c1p1','c2p1','c3p1','c4p1','c5p1','c6p1','c7p1','c8p1','c9p1','c10p1','c11p1','c12p1','c13p1']; //ls party 1 
+ var chkv=['c1p1','c2p1','c3p1','c4p1','c5p1','c6p1','c7p1','c8p1','c9p1','c10p1','c11p1','c12p1','c13p1','c14p1','c15p1']; //ls party 1 
  var univ=['c1p2','c2p2','c3p2','c4p2','c5p2','c6p2','c7p2','c8p2','c9p2','c10p2','c11p2','c12p2','c13p2','c14p2','c15p2'];
  var dhmv=['c1p3','c2p3','c3p3','c4p3','c5p3','c6p3','c7p3','c8p3','c9p3','c10p3','c11p3','c12p3','c13p3','c14p3','c15p3'];
- var rsv=['c1p4','c2p4','c3p4','c4p4','c5p4','c6p4']; //localstorage rss
+ var rsv=['c1p4','c2p4','c3p4']; //localstorage independents
  var isv=['c1p5','c2p5','c3p5','c4p5'];
  
  var p1=0,p2=0,p3=0,p4=0,p5=0;
@@ -24,7 +24,7 @@ function vote()
   }
   */
   //p1_define II box 
-  for(a1=0;a1<13;a1++)
+  for(a1=0;a1<chk.length;a1++)
   {
 	if(document.getElementById(chk[a1]).checked)
 	{
@@ -36,7 +36,7 @@ function vote()
   localStorage.party1++;
   
   //p2_define III box
-  for(a2=0;a2<15;a2++)
+  for(a2=0;a2<uni.length;a2++)
   {
 	if(document.getElementById(uni[a2]).checked)
 	{
@@ -48,7 +48,7 @@ function vote()
   localStorage.party2++;
   
   //p3_define IV box
-  for(a3=0;a3<15;a3++)
+  for(a3=0;a3<dhm.length;a3++)
   {
 	if(document.getElementById(dhm[a3]).checked)
 	{
@@ -61,7 +61,7 @@ function vote()
 
 
 //p4_define I box
-  for(a4=0;a4<6;a4++)
+  for(a4=0;a4<r.length;a4++)
   {
 	if(document.getElementById(r[a4]).checked)
 	{
@@ -72,8 +72,8 @@ function vote()
   if(p4==1)
   localStorage.party4++;
 
-
-//p5_define V box
+/*
+//p5_define V box, no is
 var is=['111','112','113','114'];
 var isv=['c1p5','c2p5','c3p5','c4p5'];
   for(a5=0;a5<4;a5++)
@@ -86,7 +86,7 @@ var isv=['c1p5','c2p5','c3p5','c4p5'];
   }
   if(p5==1)
   localStorage.party5++;
-  
+*/  
   //for nota
   if(document.getElementById('i4').checked)
 	localStorage.setItem('ip4',parseInt(localStorage.getItem('ip4'))+1);
@@ -95,9 +95,9 @@ var isv=['c1p5','c2p5','c3p5','c4p5'];
 
  function cl()
  {
- var i,flag=0;
- var arr=['s1','s2','s3','s4','s5','p1','p2','p3','p4','p5','p6','p7','p8','p9','p10','p11','p12','p13','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','d1','d2','d3','d4','d5','d6','d7','d8','d9','d10','d11','d12','d13','d14','d15','r1','r2','r3','r4','r5','r6','111','112','113','114','i4'];
- for(i=0;i<59;i++)
+ var i,flag=0; // -1,+2,-3,-4
+ var arr=['s1','s2','s3','p1','p2','p3','p4','p5','p6','p7','p8','p9','p10','p11','p12','p13','p14','p15','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','d1','d2','d3','d4','d5','d6','d7','d8','d9','d10','d11','d12','d13','d14','d15','r2','r3','i4'];
+ for(i=0;i<arr.length;i++)
  {
    if(document.getElementById(arr[i]).checked==true)
    flag=1;
@@ -113,10 +113,10 @@ var isv=['c1p5','c2p5','c3p5','c4p5'];
  
  
  //function to select the complete list
- function asc() //ashoka chakra
+ function asc() //prakrit
  {
-  var asc=['p1','p2','p3','p4','p5','p6','p7','p8','p9','p10','p11','p12','p13'];
-  for(var a=0;a<13;a++)
+  var asc=['p1','p2','p3','p4','p5','p6','p7','p8','p9','p10','p11','p12','p13','p14','p15'];
+  for(var a=0;a<asc.length;a++)
   if(document.getElementById('s1').checked)
   document.getElementById(asc[a]).checked=true;
   else
@@ -126,32 +126,32 @@ var isv=['c1p5','c2p5','c3p5','c4p5'];
 
  function assm()
  {
-  var all=['s2','s3','s4','s5','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','d1','d2','d3','d4','d5','d6','d7','d8','d9','d10','d11','d12','d13','d14','d15','r1','r2','r3','r4','r5','r6','111','112','113','114','i4'];
-  var asc=['p1','p2','p3','p4','p5','p6','p7','p8','p9','p10','p11','p12','p13'];
+  var all=['s2','s3','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','d1','d2','d3','d4','d5','d6','d7','d8','d9','d10','d11','d12','d13','d14','d15','r2','r3','i4'];
+  var asc=['p1','p2','p3','p4','p5','p6','p7','p8','p9','p10','p11','p12','p13','p14','p15'];
   var f=0;
-  for(var a=0;a<13;a++)
+  for(var a=0;a<asc.length;a++)
   {
 	if(document.getElementById(asc[a]).checked)
 	f=1;
   }
    if(f==1)
    {
-    for(var v=0;v<49;v++)
+    for(var v=0;v<all.length;v++)
 	document.getElementById(all[v]).hidden=true;
    }
    else 
    {
-    for(var v=0;v<49;v++)
+    for(var v=0;v<all.length;v++)
 	document.getElementById(all[v]).hidden=false;
    }
  }
 
  
-//united ashoka
+//samiti
 function uni()
 {
 var un=['11','12','13','14','15','16','17','18','19','20','21','22','23','24','25'];
-for(var a=0;a<15;a++)
+for(var a=0;a<un.length;a++)
 if(document.getElementById('s2').checked)
   document.getElementById(un[a]).checked=true;
   else
@@ -160,22 +160,22 @@ if(document.getElementById('s2').checked)
 //to make disappear
 function uni1()
 {
- var all=['s1','s3','s4','s5','p1','p2','p3','p4','p5','p6','p7','p8','p9','p10','p11','p12','p13','d1','d2','d3','d4','d5','d6','d7','d8','d9','d10','d11','d12','d13','d14','d15','r1','r2','r3','r4','r5','r6','111','112','113','114','i4'];
+ var all=['s1','s3','p1','p2','p3','p4','p5','p6','p7','p8','p9','p10','p11','p12','p13','p14','p15','d1','d2','d3','d4','d5','d6','d7','d8','d9','d10','d11','d12','d13','d14','d15','r2','r3','i4'];
  var uni=['11','12','13','14','15','16','17','18','19','20','21','22','23','24','25'];
  var f=0;
-  for(var a=0;a<15;a++)
+  for(var a=0;a<uni.length;a++)
   {
 	if(document.getElementById(uni[a]).checked)
 	f=1;
   }
    if(f==1)
    {
-    for(var v=0;v<43;v++)
+    for(var v=0;v<all.length;v++)
 	document.getElementById(all[v]).hidden=true;
    }
    else 
    {
-    for(var v=0;v<43;v++)
+    for(var v=0;v<all.length;v++)
 	document.getElementById(all[v]).hidden=false;
    }
  }
@@ -185,7 +185,7 @@ function uni1()
 function dhm()
 {
  var dhm=['d1','d2','d3','d4','d5','d6','d7','d8','d9','d10','d11','d12','d13','d14','d15'];
- for(var a=0;a<15;a++)
+ for(var a=0;a<dhm.length;a++)
  if(document.getElementById('s3').checked)
   document.getElementById(dhm[a]).checked=true;
   else
@@ -194,22 +194,22 @@ function dhm()
 //to make dissapear
 function dhm1()
 {
- var all=['s1','s2','s4','s5','p1','p2','p3','p4','p5','p6','p7','p8','p9','p10','p11','p12','p13','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','r1','r2','r3','r4','r5','r6','111','112','113','114','i4'];
+ var all=['s1','s2','p1','p2','p3','p4','p5','p6','p7','p8','p9','p10','p11','p12','p13','p14','p15','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','r2','r3','i4'];
  var dhm=['d1','d2','d3','d4','d5','d6','d7','d8','d9','d10','d11','d12','d13','d14','d15'];
  var f=0;
-  for(var a=0;a<15;a++)
+  for(var a=0;a<dhm.length;a++)
   {
 	if(document.getElementById(dhm[a]).checked)
 	f=1;
   }
    if(f==1)
    {
-    for(var v=0;v<43;v++)
+    for(var v=0;v<all.length;v++)
 	document.getElementById(all[v]).hidden=true;
    }
    else 
    {
-    for(var v=0;v<43;v++)
+    for(var v=0;v<all.length;v++)
 	document.getElementById(all[v]).hidden=false;
    }
 }
@@ -217,8 +217,8 @@ function dhm1()
 //rss
 function rss()
 {
- var rss=['r1','r2','r3','r4','r5','r6'];
- for(var a=0;a<6;a++)
+ var rss=['r2','r3'];
+ for(var a=0;a<rss.length;a++)
  if(document.getElementById('s4').checked)
   document.getElementById(rss[a]).checked=true;
   else
@@ -227,26 +227,31 @@ function rss()
 //to make dissapear
 function rssm()
 {
- var all=['s1','s2','s3','s5','p1','p2','p3','p4','p5','p6','p7','p8','p9','p10','p11','p12','p13','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','d1','d2','d3','d4','d5','d6','d7','d8','d9','d10','d11','d12','d13','d14','d15','111','112','113','114','i4'];
- var rss=['r1','r2','r3','r4','r5','r6'];
- var f=0;
-  for(var a=0;a<6;a++)
+ var all=['s1','r2','r3','s2','s3','p1','p2','p3','p4','p5','p6','p7','p8','p9','p10','p11','p12','p13','p14','p15','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','d1','d2','d3','d4','d5','d6','d7','d8','d9','d10','d11','d12','d13','d14','d15','i4'];
+ var rss=['r2','r3'];
+ var f=0, id=0;
+  for(var a=0;a<rss.length;a++)
   {
 	if(document.getElementById(rss[a]).checked)
-	f=1;
+	{
+		f=1;
+		id=rss[a];
+	}	
   }
    if(f==1)
    {
-    for(var v=0;v<52;v++)
-	document.getElementById(all[v]).hidden=true;
+    for(var v=0;v<all.length;v++){
+		if(all[v] != id)
+		document.getElementById(all[v]).hidden=true;
+	}
    }
    else 
    {
-    for(var v=0;v<52;v++)
+    for(var v=0;v<all.length;v++)
 	document.getElementById(all[v]).hidden=false;
    }
 }
-
+/*
 //isis
 function is()
 {
@@ -260,7 +265,7 @@ function is()
 //to make dissapear
 function ism()
 {
- var all=['s1','s2','s3','s4','p1','p2','p3','p4','p5','p6','p7','p8','p9','p10','p11','p12','p13','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','d1','d2','d3','d4','d5','d6','d7','d8','d9','d10','d11','d12','d13','d14','d15','r1','r2','r3','r4','r5','r6','i4'];
+ var all=['s1','s2','s3','s4','p1','p2','p3','p4','p5','p6','p7','p8','p9','p10','p11','p12','p13','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','d1','d2','d3','d4','d5','d6','d7','d8','d9','d10','d11','d12','d13','d14','d15','r2','r3','r4','r5','r6','i4'];
  var is=['111','112','113','114'];
  var f=0;
   for(var a=0;a<4;a++)
@@ -279,14 +284,14 @@ function ism()
 	document.getElementById(all[v]).hidden=false;
    }
 }
-
+*/
 
 //for nota
 var mem;
 function indp(mem)
 {
- var all=['s1','s2','s3','s4','s5','p1','p2','p3','p4','p5','p6','p7','p8','p9','p10','p11','p12','p13','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','d1','d2','d3','d4','d5','d6','d7','d8','d9','d10','d11','d12','d13','d14','d15','r1','r2','r3','r4','r5','r6','111','112','113','114'];
- for(var v=0;v<58;v++)
+ var all=['s1','s2','s3','p1','p2','p3','p4','p5','p6','p7','p8','p9','p10','p11','p12','p13','p14','p15','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','d1','d2','d3','d4','d5','d6','d7','d8','d9','d10','d11','d12','d13','d14','d15','r2','r3'];
+ for(var v=0;v<all.length;v++)
  {
   if(all[v]!=mem)
   document.getElementById(all[v]).hidden=!(document.getElementById(all[v]).hidden);
